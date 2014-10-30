@@ -7,7 +7,8 @@
 //
 
 #import "GameViewController.h"
-#import "GameScene.h"
+//#import "GameScene.h"
+#import "SplashScene.h"
 
 @implementation SKScene (Unarchive)
 
@@ -41,11 +42,9 @@
     /* Sprite Kit applies additional optimizations to improve rendering performance */
     skView.ignoresSiblingOrder = YES;
     
-    // Create and configure the scene.
-    GameScene *scene = [GameScene unarchiveFromFile:@"GameScene"];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
+    skView.multipleTouchEnabled = NO;
     
-    // Present the scene.
+    SplashScene *scene = [SplashScene sceneWithSize:skView.frame.size];
     [skView presentScene:scene];
 }
 
