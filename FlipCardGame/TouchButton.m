@@ -33,14 +33,15 @@
     button.hot = NO;
     button.action = action;
     
+    button.userInteractionEnabled = YES;
+    
     return button;
 }
 
-- (void)touchesBegan:(CGPoint)touch
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    self.hot = NO;
-    self.touching = NO;
-    
+    CGPoint touch = [[touches anyObject] locationInNode:self.parent];
+        
     if (CGRectContainsPoint(self.frame, touch))
     {
         self.hot = YES;
@@ -49,8 +50,10 @@
     }
 }
 
-- (void)touchesMoved:(CGPoint)touch
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    CGPoint touch = [[touches anyObject] locationInNode:self.parent];
+    
     if (self.hot)
     {
         if (CGRectContainsPoint(self.frame, touch))
@@ -72,7 +75,7 @@
     }
 }
 
-- (void)touchesEnded
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     if (self.touching)
     {
@@ -82,7 +85,7 @@
     [self setTexture:self.textureNormal];
 }
 
-- (void)touchesCancelled
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self setTexture:self.textureNormal];
 }

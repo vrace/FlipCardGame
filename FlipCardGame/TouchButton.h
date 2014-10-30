@@ -12,9 +12,4 @@
 
 + (TouchButton*)createWithNormal:(SKTexture*)normalTexture down:(SKTexture*)downTexture action:(dispatch_block_t)action;
 
-- (void)touchesBegan:(CGPoint)touch;
-- (void)touchesMoved:(CGPoint)touch;
-- (void)touchesEnded;
-- (void)touchesCancelled;
-
 @end

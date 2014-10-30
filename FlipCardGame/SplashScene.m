@@ -10,14 +10,6 @@
 #import "TouchButton.h"
 #import "GameScene.h"
 
-@interface SplashScene()
-{
-}
-
-@property TouchButton *startButton;
-
-@end
-
 @implementation SplashScene
 
 - (void)didMoveToView:(SKView *)view
@@ -33,43 +25,15 @@
     SKTexture *normal = [SKTexture textureWithImageNamed:@"Start_Normal"];
     SKTexture *down = [SKTexture textureWithImageNamed:@"Start_Down"];
     
-    self.startButton = [TouchButton createWithNormal:normal down:down action:^{[self launchMainScene];}];
-    self.startButton.position = CGPointMake(size.width / 2, size.height * 0.4f);
-    [self addChild:self.startButton];
+    TouchButton *button = [TouchButton createWithNormal:normal down:down action:^{[self launchMainScene];}];
+    button.position = CGPointMake(size.width / 2, size.height * 0.4f);
+    [self addChild:button];
 }
 
 - (void)launchMainScene
 {
     GameScene *scene = [GameScene sceneWithSize:self.frame.size];
     [self.view presentScene:scene transition:[SKTransition fadeWithDuration:0.3f]];
-}
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    UITouch *touch = [touches anyObject];
-    if (touch)
-    {
-        [self.startButton touchesBegan:[touch locationInNode:self]];
-    }
-}
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    UITouch *touch = [touches anyObject];
-    if (touch)
-    {
-        [self.startButton touchesMoved:[touch locationInNode:self]];
-    }
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [self.startButton touchesEnded];
-}
-
-- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [self.startButton touchesEnded];
 }
 
 @end
