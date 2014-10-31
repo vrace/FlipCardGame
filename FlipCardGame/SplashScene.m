@@ -8,7 +8,7 @@
 
 #import "SplashScene.h"
 #import "TouchButton.h"
-#import "GameScene.h"
+#import "MainGameScene.h"
 
 @implementation SplashScene
 
@@ -32,7 +32,7 @@
 
 - (void)launchMainScene
 {
-    GameScene *scene = [GameScene sceneWithSize:self.frame.size];
+    MainGameScene *scene = [MainGameScene sceneWithSize:self.frame.size];
     
     SKAction *sfx = [SKAction playSoundFileNamed:@"pickup_star.wav" waitForCompletion:NO];
     SKAction *nextScene = [SKAction runBlock:^{ [self.view presentScene:scene transition:[SKTransition fadeWithDuration:0.7]]; }];
