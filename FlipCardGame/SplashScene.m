@@ -33,7 +33,11 @@
 - (void)launchMainScene
 {
     GameScene *scene = [GameScene sceneWithSize:self.frame.size];
-    [self.view presentScene:scene transition:[SKTransition fadeWithDuration:0.3f]];
+    
+    SKAction *sfx = [SKAction playSoundFileNamed:@"pickup_star.wav" waitForCompletion:NO];
+    SKAction *nextScene = [SKAction runBlock:^{ [self.view presentScene:scene transition:[SKTransition fadeWithDuration:0.7]]; }];
+    
+    [self runAction:[SKAction sequence:@[sfx, nextScene]]];
 }
 
 @end

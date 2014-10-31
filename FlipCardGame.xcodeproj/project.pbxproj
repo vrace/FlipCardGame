@@ -18,6 +18,7 @@
 		111BC0921A01E44E00BC9234 /* FlipCardGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 111BC0911A01E44E00BC9234 /* FlipCardGameTests.m */; };
 		112B8F6B1A02192200013B6E /* SplashScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 112B8F6A1A02192200013B6E /* SplashScene.m */; };
 		112B8F6E1A02330600013B6E /* TouchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 112B8F6D1A02330600013B6E /* TouchButton.m */; };
+		112B8F731A03257F00013B6E /* pickup_star.wav in Resources */ = {isa = PBXBuildFile; fileRef = 112B8F721A03257F00013B6E /* pickup_star.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		112B8F6A1A02192200013B6E /* SplashScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScene.m; sourceTree = "<group>"; };
 		112B8F6C1A02330500013B6E /* TouchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchButton.h; sourceTree = "<group>"; };
 		112B8F6D1A02330600013B6E /* TouchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchButton.m; sourceTree = "<group>"; };
+		112B8F721A03257F00013B6E /* pickup_star.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = pickup_star.wav; path = Sounds/pickup_star.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				112B8F6D1A02330600013B6E /* TouchButton.m */,
 				111BC07F1A01E44E00BC9234 /* Main.storyboard */,
 				111BC0821A01E44E00BC9234 /* Images.xcassets */,
+				112B8F711A03254C00013B6E /* Sounds */,
 				111BC0841A01E44E00BC9234 /* LaunchScreen.xib */,
 				111BC0701A01E44E00BC9234 /* Supporting Files */,
 			);
@@ -135,6 +138,14 @@
 				111BC0901A01E44E00BC9234 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		112B8F711A03254C00013B6E /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				112B8F721A03257F00013B6E /* pickup_star.wav */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +232,7 @@
 				111BC0831A01E44E00BC9234 /* Images.xcassets in Resources */,
 				111BC07B1A01E44E00BC9234 /* GameScene.sks in Resources */,
 				111BC0811A01E44E00BC9234 /* Main.storyboard in Resources */,
+				112B8F731A03257F00013B6E /* pickup_star.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
