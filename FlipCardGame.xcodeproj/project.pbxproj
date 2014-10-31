@@ -21,6 +21,7 @@
 		112B8F731A03257F00013B6E /* pickup_star.wav in Resources */ = {isa = PBXBuildFile; fileRef = 112B8F721A03257F00013B6E /* pickup_star.wav */; };
 		112B8F761A0333D400013B6E /* MainGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 112B8F751A0333D400013B6E /* MainGameScene.m */; };
 		112B8F791A03349800013B6E /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = 112B8F781A03349800013B6E /* Board.m */; };
+		112B8F7C1A0359DF00013B6E /* Piece.m in Sources */ = {isa = PBXBuildFile; fileRef = 112B8F7B1A0359DF00013B6E /* Piece.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		112B8F751A0333D400013B6E /* MainGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainGameScene.m; sourceTree = "<group>"; };
 		112B8F771A03349800013B6E /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
 		112B8F781A03349800013B6E /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Board.m; sourceTree = "<group>"; };
+		112B8F7A1A0359DF00013B6E /* Piece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Piece.h; sourceTree = "<group>"; };
+		112B8F7B1A0359DF00013B6E /* Piece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Piece.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				112B8F751A0333D400013B6E /* MainGameScene.m */,
 				112B8F771A03349800013B6E /* Board.h */,
 				112B8F781A03349800013B6E /* Board.m */,
+				112B8F7A1A0359DF00013B6E /* Piece.h */,
+				112B8F7B1A0359DF00013B6E /* Piece.m */,
 				111BC07F1A01E44E00BC9234 /* Main.storyboard */,
 				111BC0821A01E44E00BC9234 /* Images.xcassets */,
 				112B8F711A03254C00013B6E /* Sounds */,
@@ -260,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112B8F7C1A0359DF00013B6E /* Piece.m in Sources */,
 				112B8F761A0333D400013B6E /* MainGameScene.m in Sources */,
 				112B8F6B1A02192200013B6E /* SplashScene.m in Sources */,
 				112B8F791A03349800013B6E /* Board.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "MainGameScene.h"
 #import "Board.h"
+#import "Piece.h"
 
 @interface MainGameScene()
 {
