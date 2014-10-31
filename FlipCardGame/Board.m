@@ -9,9 +9,9 @@
 #import "Board.h"
 #import "Piece.h"
 
-const int CountHorz = 4;
-const int CountVert = 4;
-const int CountTotal = CountHorz * CountVert;
+const int CountRow = 4;
+const int CountCol = 4;
+const int CountTotal = CountRow * CountCol;
 
 @interface Board()
 {
@@ -78,7 +78,18 @@ const int CountTotal = CountHorz * CountVert;
 {
     Piece *piece = [Piece createWithType:type];
     
-    piece.position = CGPointMake(70, 70); // test
+    // place the piece in proper position
+    
+    int row = index / CountCol;
+    int col = index % CountCol;
+    
+    int width = self.size.height / CountCol;
+    int height = self.size.height / CountRow;
+    
+    int px = 20 + width * col + width / 2;
+    int py = height * row + height / 2;
+    
+    piece.position = CGPointMake(px, py);
     
     return piece;
 }
