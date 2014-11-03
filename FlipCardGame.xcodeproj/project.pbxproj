@@ -22,6 +22,9 @@
 		112B8F761A0333D400013B6E /* MainGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 112B8F751A0333D400013B6E /* MainGameScene.m */; };
 		112B8F791A03349800013B6E /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = 112B8F781A03349800013B6E /* Board.m */; };
 		112B8F7C1A0359DF00013B6E /* Piece.m in Sources */ = {isa = PBXBuildFile; fileRef = 112B8F7B1A0359DF00013B6E /* Piece.m */; };
+		112B8F801A07127E00013B6E /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 112B8F7D1A07127E00013B6E /* click.wav */; };
+		112B8F811A07127E00013B6E /* effect_unswap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 112B8F7E1A07127E00013B6E /* effect_unswap.mp3 */; };
+		112B8F821A07127E00013B6E /* pew-pew-lei.wav in Resources */ = {isa = PBXBuildFile; fileRef = 112B8F7F1A07127E00013B6E /* pew-pew-lei.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		112B8F781A03349800013B6E /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Board.m; sourceTree = "<group>"; };
 		112B8F7A1A0359DF00013B6E /* Piece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Piece.h; sourceTree = "<group>"; };
 		112B8F7B1A0359DF00013B6E /* Piece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Piece.m; sourceTree = "<group>"; };
+		112B8F7D1A07127E00013B6E /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = click.wav; path = Sounds/click.wav; sourceTree = "<group>"; };
+		112B8F7E1A07127E00013B6E /* effect_unswap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = effect_unswap.mp3; path = Sounds/effect_unswap.mp3; sourceTree = "<group>"; };
+		112B8F7F1A07127E00013B6E /* pew-pew-lei.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "pew-pew-lei.wav"; path = "Sounds/pew-pew-lei.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,9 @@
 		112B8F711A03254C00013B6E /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				112B8F7D1A07127E00013B6E /* click.wav */,
+				112B8F7E1A07127E00013B6E /* effect_unswap.mp3 */,
+				112B8F7F1A07127E00013B6E /* pew-pew-lei.wav */,
 				112B8F721A03257F00013B6E /* pickup_star.wav */,
 			);
 			name = Sounds;
@@ -246,8 +255,11 @@
 				111BC0861A01E44E00BC9234 /* LaunchScreen.xib in Resources */,
 				111BC0831A01E44E00BC9234 /* Images.xcassets in Resources */,
 				111BC07B1A01E44E00BC9234 /* GameScene.sks in Resources */,
+				112B8F801A07127E00013B6E /* click.wav in Resources */,
+				112B8F811A07127E00013B6E /* effect_unswap.mp3 in Resources */,
 				111BC0811A01E44E00BC9234 /* Main.storyboard in Resources */,
 				112B8F731A03257F00013B6E /* pickup_star.wav in Resources */,
+				112B8F821A07127E00013B6E /* pew-pew-lei.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

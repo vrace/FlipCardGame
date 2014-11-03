@@ -59,11 +59,16 @@
 
 - (void)flipToTexture:(SKTexture*)texture
 {
+    NSString *file = @"click.wav";
+    if (texture == self.textureCover)
+        file = @"pew-pew-lei.wav";
+    
+    SKAction *sfx = [SKAction playSoundFileNamed:file waitForCompletion:NO];
     SKAction *shrink = [SKAction scaleXTo:0 duration:0.15f];
     SKAction *replace = [SKAction setTexture:texture];
     SKAction *unshrink = [SKAction scaleTo:1.0f duration:0.15f];
     
-    [self runAction:[SKAction sequence:@[shrink, replace, unshrink]]];
+    [self runAction:[SKAction sequence:@[sfx, shrink, replace, unshrink]]];
 }
 
 @end
