@@ -7,7 +7,8 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "Board.h"
 
-@interface MainGameScene : SKScene
+@interface MainGameScene : SKScene <BoardEventHandler>
 
 @end

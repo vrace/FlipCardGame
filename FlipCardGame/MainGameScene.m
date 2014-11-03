@@ -7,7 +7,7 @@
 //
 
 #import "MainGameScene.h"
-#import "Board.h"
+#import "ScoreScene.h"
 #import "Piece.h"
 
 @interface MainGameScene()
@@ -27,6 +27,17 @@
     self.board.anchorPoint = CGPointMake(0, 0);
     self.board.position = CGPointMake(0, 0);
     [self addChild:self.board];
+}
+
+- (void)boardCompletedWithScore:(float)score
+{
+    ScoreScene *scene = [ScoreScene scoreSceneWithSize:self.size score:score];
+    
+    SKAction *wait = [SKAction waitForDuration:1.0f];
+    SKTransition *trans = [SKTransition fadeWithDuration:0.7f];
+    SKAction *navigate = [SKAction runBlock:^{ [self.view presentScene:scene transition:trans]; }];
+    
+    [self runAction:[SKAction sequence:@[wait, navigate]]];
 }
 
 @end

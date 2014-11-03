@@ -25,6 +25,7 @@
 		112B8F801A07127E00013B6E /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 112B8F7D1A07127E00013B6E /* click.wav */; };
 		112B8F811A07127E00013B6E /* effect_unswap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 112B8F7E1A07127E00013B6E /* effect_unswap.mp3 */; };
 		112B8F821A07127E00013B6E /* pew-pew-lei.wav in Resources */ = {isa = PBXBuildFile; fileRef = 112B8F7F1A07127E00013B6E /* pew-pew-lei.wav */; };
+		112B8F851A0747BA00013B6E /* ScoreScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 112B8F841A0747BA00013B6E /* ScoreScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		112B8F7D1A07127E00013B6E /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = click.wav; path = Sounds/click.wav; sourceTree = "<group>"; };
 		112B8F7E1A07127E00013B6E /* effect_unswap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = effect_unswap.mp3; path = Sounds/effect_unswap.mp3; sourceTree = "<group>"; };
 		112B8F7F1A07127E00013B6E /* pew-pew-lei.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "pew-pew-lei.wav"; path = "Sounds/pew-pew-lei.wav"; sourceTree = "<group>"; };
+		112B8F831A0747BA00013B6E /* ScoreScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreScene.h; sourceTree = "<group>"; };
+		112B8F841A0747BA00013B6E /* ScoreScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				112B8F6D1A02330600013B6E /* TouchButton.m */,
 				112B8F741A0333D400013B6E /* MainGameScene.h */,
 				112B8F751A0333D400013B6E /* MainGameScene.m */,
+				112B8F831A0747BA00013B6E /* ScoreScene.h */,
+				112B8F841A0747BA00013B6E /* ScoreScene.m */,
 				112B8F771A03349800013B6E /* Board.h */,
 				112B8F781A03349800013B6E /* Board.m */,
 				112B8F7A1A0359DF00013B6E /* Piece.h */,
@@ -280,6 +285,7 @@
 				112B8F7C1A0359DF00013B6E /* Piece.m in Sources */,
 				112B8F761A0333D400013B6E /* MainGameScene.m in Sources */,
 				112B8F6B1A02192200013B6E /* SplashScene.m in Sources */,
+				112B8F851A0747BA00013B6E /* ScoreScene.m in Sources */,
 				112B8F791A03349800013B6E /* Board.m in Sources */,
 				111BC07E1A01E44E00BC9234 /* GameViewController.m in Sources */,
 				111BC0761A01E44E00BC9234 /* AppDelegate.m in Sources */,

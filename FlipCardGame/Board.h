@@ -9,6 +9,12 @@
 #import <SpriteKit/SpriteKit.h>
 #import "Piece.h"
 
+@protocol BoardEventHandler
+
+- (void)boardCompletedWithScore:(float)score;
+
+@end
+
 @interface Board : SKSpriteNode
 
 + (Board*)create;

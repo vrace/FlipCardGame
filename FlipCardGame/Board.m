@@ -19,6 +19,7 @@ const int CountTotal = CountRow * CountCol;
 }
 
 @property Piece *hotPiece;
+@property int finishCount;
 
 @end
 
@@ -47,6 +48,7 @@ const int CountTotal = CountRow * CountCol;
     }
     
     self.hotPiece = nil;
+    self.finishCount = 0;
 }
 
 - (void)generateTypes:(PieceType*)types count:(int)count
@@ -110,6 +112,16 @@ const int CountTotal = CountRow * CountCol;
         {
             [piece vanish:0];
             [self.hotPiece vanish:[piece flipRemainingTime]];
+            
+            self.finishCount += 2;
+            
+            if (self.finishCount >= CountTotal)
+            {
+                if ([self.parent.class conformsToProtocol:@protocol(BoardEventHandler)])
+                {
+                    [(id)self.parent boardCompletedWithScore:0];
+                }
+            }
         }
         else
         {
@@ -120,6 +132,5 @@ const int CountTotal = CountRow * CountCol;
         self.hotPiece = nil;
     }
 }
-
 
 @end
