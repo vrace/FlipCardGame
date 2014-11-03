@@ -18,6 +18,8 @@ const int CountTotal = CountRow * CountCol;
     Piece *pieces[CountTotal];
 }
 
+@property Piece *hotPiece;
+
 @end
 
 @implementation Board
@@ -43,6 +45,8 @@ const int CountTotal = CountRow * CountCol;
         pieces[i] = [self generatePiece:types[i] index:i];
         [self addChild:pieces[i]];
     }
+    
+    self.hotPiece = nil;
 }
 
 - (void)generateTypes:(PieceType*)types count:(int)count
@@ -92,6 +96,29 @@ const int CountTotal = CountRow * CountCol;
     piece.position = CGPointMake(px, py);
     
     return piece;
+}
+
+- (void)pieceFlipped:(Piece*)piece
+{
+    if (!self.hotPiece)
+    {
+        self.hotPiece = piece;
+    }
+    else
+    {
+        if (self.hotPiece.pieceType == piece.pieceType)
+        {
+            [piece vanish:0];
+            [self.hotPiece vanish:[piece flipRemainingTime]];
+        }
+        else
+        {
+            [piece flipToCover:0];
+            [self.hotPiece flipToCover:[piece flipRemainingTime]];
+        }
+        
+        self.hotPiece = nil;
+    }
 }
 
 

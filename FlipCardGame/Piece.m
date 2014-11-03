@@ -7,6 +7,7 @@
 //
 
 #import "Piece.h"
+#import "Board.h"
 
 @interface Piece()
 {
@@ -43,21 +44,39 @@
 {
     if (self.texture != self.textureContent)
     {
-        [self flipToContent];
+        if (![self hasActions])
+        {
+            [self flipToContent];
+        
+            if ([self.parent isKindOfClass:[Board class]])
+            {
+                Board *board = (Board*)self.parent;
+                [board pieceFlipped:self];
+            }
+        }
     }
 }
 
 - (void)flipToContent
 {
-    [self flipToTexture:self.textureContent];
+    [self runAction:[self flipToTexture:self.textureContent] withKey:@"flip"];
 }
 
-- (void)flipToCover
+- (float)flipRemainingTime
 {
-    [self flipToTexture:self.textureCover];
+    SKAction *action = [self actionForKey:@"flip"];
+    return [action duration];
 }
 
-- (void)flipToTexture:(SKTexture*)texture
+- (void)flipToCover:(float)wait
+{
+    wait += [self flipRemainingTime];
+    SKAction *waitAction = [SKAction waitForDuration:wait];
+    
+    [self runAction:[SKAction sequence:@[waitAction, [self flipToTexture:self.textureCover]]]];
+}
+
+- (SKAction*)flipToTexture:(SKTexture*)texture
 {
     NSString *file = @"click.wav";
     if (texture == self.textureCover)
@@ -68,7 +87,16 @@
     SKAction *replace = [SKAction setTexture:texture];
     SKAction *unshrink = [SKAction scaleTo:1.0f duration:0.15f];
     
-    [self runAction:[SKAction sequence:@[sfx, shrink, replace, unshrink]]];
+    return [SKAction sequence:@[sfx, shrink, replace, unshrink]];
+}
+
+- (void)vanish:(float)wait
+{
+    wait += [self flipRemainingTime];
+    SKAction *waitAction = [SKAction waitForDuration:wait];
+    SKAction *sfx = [SKAction playSoundFileNamed:@"effect_unswap.mp3" waitForCompletion:NO];
+    SKAction *disappear = [SKAction removeFromParent];
+    [self runAction:[SKAction sequence:@[waitAction, sfx, disappear]]];
 }
 
 @end

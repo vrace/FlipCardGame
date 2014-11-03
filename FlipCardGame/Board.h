@@ -7,9 +7,12 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "Piece.h"
 
 @interface Board : SKSpriteNode
 
 + (Board*)create;
+
+- (void)pieceFlipped:(Piece*)piece;
 
 @end

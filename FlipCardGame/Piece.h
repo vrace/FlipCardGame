@@ -17,4 +17,8 @@ typedef int PieceType;
 
 + (Piece*)createWithType:(PieceType)type;
 
+- (void)vanish:(float)wait;
+- (void)flipToCover:(float)wait;
+- (float)flipRemainingTime;
+
 @end
