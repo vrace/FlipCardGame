@@ -11,7 +11,8 @@
 
 @protocol BoardEventHandler
 
-- (void)boardCompletedWithScore:(float)score;
+- (void)boardAction;
+- (void)boardCompleted;
 
 @end
 

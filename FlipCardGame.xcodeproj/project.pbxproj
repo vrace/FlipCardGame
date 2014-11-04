@@ -26,6 +26,7 @@
 		112B8F811A07127E00013B6E /* effect_unswap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 112B8F7E1A07127E00013B6E /* effect_unswap.mp3 */; };
 		112B8F821A07127E00013B6E /* pew-pew-lei.wav in Resources */ = {isa = PBXBuildFile; fileRef = 112B8F7F1A07127E00013B6E /* pew-pew-lei.wav */; };
 		112B8F851A0747BA00013B6E /* ScoreScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 112B8F841A0747BA00013B6E /* ScoreScene.m */; };
+		112B8F881A0866C600013B6E /* TickingTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 112B8F871A0866C600013B6E /* TickingTimer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		112B8F7F1A07127E00013B6E /* pew-pew-lei.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "pew-pew-lei.wav"; path = "Sounds/pew-pew-lei.wav"; sourceTree = "<group>"; };
 		112B8F831A0747BA00013B6E /* ScoreScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreScene.h; sourceTree = "<group>"; };
 		112B8F841A0747BA00013B6E /* ScoreScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreScene.m; sourceTree = "<group>"; };
+		112B8F861A0866C600013B6E /* TickingTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TickingTimer.h; sourceTree = "<group>"; };
+		112B8F871A0866C600013B6E /* TickingTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TickingTimer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 				112B8F781A03349800013B6E /* Board.m */,
 				112B8F7A1A0359DF00013B6E /* Piece.h */,
 				112B8F7B1A0359DF00013B6E /* Piece.m */,
+				112B8F861A0866C600013B6E /* TickingTimer.h */,
+				112B8F871A0866C600013B6E /* TickingTimer.m */,
 				111BC07F1A01E44E00BC9234 /* Main.storyboard */,
 				111BC0821A01E44E00BC9234 /* Images.xcassets */,
 				112B8F711A03254C00013B6E /* Sounds */,
@@ -282,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112B8F881A0866C600013B6E /* TickingTimer.m in Sources */,
 				112B8F7C1A0359DF00013B6E /* Piece.m in Sources */,
 				112B8F761A0333D400013B6E /* MainGameScene.m in Sources */,
 				112B8F6B1A02192200013B6E /* SplashScene.m in Sources */,

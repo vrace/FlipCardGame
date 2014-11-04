@@ -102,6 +102,14 @@ const int CountTotal = CountRow * CountCol;
 
 - (void)pieceFlipped:(Piece*)piece
 {
+    id handler = nil;
+    if ([self.parent.class conformsToProtocol:@protocol(BoardEventHandler)])
+    {
+        handler = self.parent;
+    }
+    
+    [handler boardAction];
+    
     if (!self.hotPiece)
     {
         self.hotPiece = piece;
@@ -117,10 +125,7 @@ const int CountTotal = CountRow * CountCol;
             
             if (self.finishCount >= CountTotal)
             {
-                if ([self.parent.class conformsToProtocol:@protocol(BoardEventHandler)])
-                {
-                    [(id)self.parent boardCompletedWithScore:0];
-                }
+                [handler boardCompleted];
             }
         }
         else
