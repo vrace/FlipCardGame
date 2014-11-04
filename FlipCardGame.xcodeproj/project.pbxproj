@@ -27,6 +27,9 @@
 		112B8F821A07127E00013B6E /* pew-pew-lei.wav in Resources */ = {isa = PBXBuildFile; fileRef = 112B8F7F1A07127E00013B6E /* pew-pew-lei.wav */; };
 		112B8F851A0747BA00013B6E /* ScoreScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 112B8F841A0747BA00013B6E /* ScoreScene.m */; };
 		112B8F881A0866C600013B6E /* TickingTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 112B8F871A0866C600013B6E /* TickingTimer.m */; };
+		11BC02C61A08B00A0013E79A /* PieceRemove.sks in Resources */ = {isa = PBXBuildFile; fileRef = 11BC02C41A08B00A0013E79A /* PieceRemove.sks */; };
+		11BC02C71A08B00A0013E79A /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 11BC02C51A08B00A0013E79A /* spark.png */; };
+		11BC02C91A08BEB30013E79A /* Fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 11BC02C81A08BEB30013E79A /* Fire.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		112B8F841A0747BA00013B6E /* ScoreScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreScene.m; sourceTree = "<group>"; };
 		112B8F861A0866C600013B6E /* TickingTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TickingTimer.h; sourceTree = "<group>"; };
 		112B8F871A0866C600013B6E /* TickingTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TickingTimer.m; sourceTree = "<group>"; };
+		11BC02C41A08B00A0013E79A /* PieceRemove.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PieceRemove.sks; sourceTree = "<group>"; };
+		11BC02C51A08B00A0013E79A /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		11BC02C81A08BEB30013E79A /* Fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Fire.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,9 @@
 				112B8F711A03254C00013B6E /* Sounds */,
 				111BC0841A01E44E00BC9234 /* LaunchScreen.xib */,
 				111BC0701A01E44E00BC9234 /* Supporting Files */,
+				11BC02C41A08B00A0013E79A /* PieceRemove.sks */,
+				11BC02C81A08BEB30013E79A /* Fire.sks */,
+				11BC02C51A08B00A0013E79A /* spark.png */,
 			);
 			path = FlipCardGame;
 			sourceTree = "<group>";
@@ -262,10 +271,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11BC02C91A08BEB30013E79A /* Fire.sks in Resources */,
 				111BC0861A01E44E00BC9234 /* LaunchScreen.xib in Resources */,
 				111BC0831A01E44E00BC9234 /* Images.xcassets in Resources */,
+				11BC02C61A08B00A0013E79A /* PieceRemove.sks in Resources */,
 				111BC07B1A01E44E00BC9234 /* GameScene.sks in Resources */,
 				112B8F801A07127E00013B6E /* click.wav in Resources */,
+				11BC02C71A08B00A0013E79A /* spark.png in Resources */,
 				112B8F811A07127E00013B6E /* effect_unswap.mp3 in Resources */,
 				111BC0811A01E44E00BC9234 /* Main.storyboard in Resources */,
 				112B8F731A03257F00013B6E /* pickup_star.wav in Resources */,

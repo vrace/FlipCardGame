@@ -95,8 +95,17 @@
     wait += [self flipRemainingTime];
     SKAction *waitAction = [SKAction waitForDuration:wait];
     SKAction *sfx = [SKAction playSoundFileNamed:@"effect_unswap.mp3" waitForCompletion:NO];
+    SKAction *vfx = [SKAction runBlock:^{ [self.parent addChild:[self makeVanishVfx]]; }];
     SKAction *disappear = [SKAction removeFromParent];
-    [self runAction:[SKAction sequence:@[waitAction, sfx, disappear]]];
+    [self runAction:[SKAction sequence:@[waitAction, vfx, sfx, disappear]]];
+}
+
+- (SKEmitterNode*)makeVanishVfx
+{
+    NSString *res = [[NSBundle mainBundle] pathForResource:@"Fire" ofType:@"sks"];
+    SKEmitterNode *emitter = [NSKeyedUnarchiver unarchiveObjectWithFile:res];
+    emitter.position = CGPointMake(self.position.x, self.position.y - self.size.height * 0.5f);
+    return emitter;
 }
 
 @end
