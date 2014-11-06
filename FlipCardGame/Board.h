@@ -18,7 +18,7 @@
 
 @interface Board : SKSpriteNode
 
-+ (Board*)create;
++ (Board*)createWithSize:(CGSize)size;
 
 - (void)pieceFlipped:(Piece*)piece;
 

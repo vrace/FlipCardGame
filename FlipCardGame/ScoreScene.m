@@ -26,6 +26,7 @@
     SKSpriteNode *canvas = [SKSpriteNode spriteNodeWithImageNamed:@"Board"];
     canvas.anchorPoint = CGPointZero;
     canvas.position = CGPointZero;
+    canvas.size = self.size;
     [self addChild:canvas];
     
     SKLabelNode *textComplete = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];

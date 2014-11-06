@@ -25,7 +25,7 @@
 
 - (void)didMoveToView:(SKView *)view
 {
-    self.board = [Board create];
+    self.board = [Board createWithSize:self.size];
     self.board.anchorPoint = CGPointMake(0, 0);
     self.board.position = CGPointMake(0, 0);
     [self addChild:self.board];

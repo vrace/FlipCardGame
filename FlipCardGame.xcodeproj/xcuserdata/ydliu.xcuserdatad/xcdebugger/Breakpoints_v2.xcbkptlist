@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlipCardGame/Board.m"
-            timestampString = "436685844.933056"
+            timestampString = "436781666.049031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "+create"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "+createWithSize:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

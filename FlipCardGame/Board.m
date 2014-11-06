@@ -25,10 +25,11 @@ const int CountTotal = CountRow * CountCol;
 
 @implementation Board
 
-+ (Board*)create
++ (Board*)createWithSize:(CGSize)size;
 {
     Board *board = [[Board alloc] initWithImageNamed:@"Board"];
     
+    board.size = size;
     [board initializeBoard];
     
     return board;
